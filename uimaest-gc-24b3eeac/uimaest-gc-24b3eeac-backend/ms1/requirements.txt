@@ -1,0 +1,10 @@
+uvicorn
+fastapi
+aider-chat
+langchain
+langchain_openai
+langchain_groq
+langchain_core
+transformers
+aiofiles
+python-multipart

@@ -1,0 +1,10 @@
+virtualEnv
+venv
+.env
+node_modules
+.aider*
+backend/__pycache__/
+backend/errors/__pycache__/compile_errors.cpython-311.pyc
+backend/__pycache__/react_project.cpython-311.pyc
+backend/__pycache__/templates.cpython-311.pyc
+templates

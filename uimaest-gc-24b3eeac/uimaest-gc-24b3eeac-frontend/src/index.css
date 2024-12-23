@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .custom-image-upload::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0%;
+  padding: 0%;
+  margin: 0%;
+}
+
+.custom-image-upload::before {
+  content: "Choose an image to add to the chat";
+  color: black;
+  width: auto;
+}
+
+
+.custom-document-upload::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0%;
+  padding: 0%;
+  margin: 0%;
+}
+
+.custom-document-upload::before {
+  content: "Add your custom library";
+  color: black;
+  width: auto;
+} */
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bg-main {
+  background-color: #ffffff;
+}
+
+.bg-sidebar {
+  background-color: #001f3f;
+}
+
+.bg-brand {
+  background-color: #ff6d00;
+}
+.bg-brand-secondary {
+  background-color: #ffffff;
+}
+
+.text-neutral-400 {
+  color: #e7e7e7;
+}
+
+.bg-neutral-50 {
+  background-color: #F8FAFF;
+  
+}
+
+.brand-blue-text {
+  color: #006894;
+}
+.brand-sidebar-gradient {
+  background-color: #fafafa;
+  /* background: linear-gradient(180deg, #223c56, #123f6d); */
+}
+.brand-chat-gradient {
+  background-color: rgba(18, 63, 109, 1);
+  /* background: linear-gradient(180deg, #123f6d, #002951); */
+}
+
+.uploading-animation {
+  height: 2px;
+  width: auto;
+  --c: no-repeat linear-gradient(#ff6d00 0 0);
+  background: var(--c), var(--c), #ffa35d;
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
+}
+@keyframes l16 {
+  0% {
+    background-position: -150% 0, -150% 0;
+  }
+  66% {
+    background-position: 250% 0, -150% 0;
+  }
+  100% {
+    background-position: 250% 0, 250% 0;
+  }
+}
+
+.new-message-bot {
+  animation: slideInFromLeft 0.2s ease;
+}
+
+.new-message-you {
+  animation: slideInFromRight 0.2s ease;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+:root {
+  margin: 0%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* .brand-gradient {
+  background: linear-gradient(60deg, #0061ff -50%, #60efff 100%);
+}
+
+.brand-gradient-sidebar {
+  background: linear-gradient(0deg, #f4f4f4 -30%, #ffffff 60%);
+} */
+
+.main-bg {
+  background-color: rgb(249, 249, 249);
+}
+
+/* .brand-gradient-text {
+  background: #7c3aed;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-gradient-text {
+  color: #7c3aed;
+} */
+
+.brand-gradient-main {
+  background: linear-gradient(0deg, #ffffff 15%, white 50%);
+}
+
+.resizable {
+  position: absolute;
+}
+
+.loader {
+  width: 15px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(#ffffff 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  animation: l7 1s infinite linear alternate;
+}
+@keyframes l7 {
+  0% {
+    background-size: 20% 50%, 20% 50%, 20% 50%;
+  }
+  20% {
+    background-size: 20% 20%, 20% 50%, 20% 50%;
+  }
+  40% {
+    background-size: 20% 100%, 20% 20%, 20% 50%;
+  }
+  60% {
+    background-size: 20% 50%, 20% 100%, 20% 20%;
+  }
+  80% {
+    background-size: 20% 50%, 20% 50%, 20% 100%;
+  }
+  100% {
+    background-size: 20% 50%, 20% 50%, 20% 50%;
+  }
+}
+
+.query-processing {
+  position: relative;
+  animation: jump 0.6s ease infinite alternate;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateX(0px) translateY(-5px);
+  }
+
+  100% {
+    transform: translateX(0px) translateY(5px);
+  }
+}
+
+/* .message-loader {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #130f0f;
+  box-shadow: 20px 0 #686161, -20px 0 #3a3030;
+  position: relative;
+  animation: flash 0.5s ease-out infinite alternate;
+} */
+
+/* @keyframes flash {
+  0% {
+    background-color: #fff2;
+    box-shadow: 20px 0 #fff2, -20px 0 #322323;
+  }
+  50% {
+    background-color: #2b2222;
+    box-shadow: 20px 0 #fff2, -20px 0 #fff2;
+  }
+  100% {
+    background-color: #fff2;
+    box-shadow: 20px 0 #20201e, -20px 0 #fff2;
+  }
+} */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
